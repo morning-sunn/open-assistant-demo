@@ -1,5 +1,7 @@
 # OpenAssistant Demo
 
+This is just a demo on using OpenAssistant with langchain on huggingface 
+
 # install dependencies
 ```bash
 pip install -U pdm
