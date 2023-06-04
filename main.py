@@ -9,8 +9,13 @@ def make_oa_chain():
 
     prompt_template = PromptTemplate(template=template, input_variables=["question"])
 
-    open_assistant = HuggingFaceHub(repo_id="OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5",
-                                    huggingfacehub_api_token=config('hf_api_key'))
+    open_assistant = HuggingFaceHub(
+        repo_id="OpenAssistant/oasst-sft-4-pythia-12b-epoch-3.5",
+        huggingfacehub_api_token=config('hf_api_key'),
+        model_kwargs={
+            'max_new_tokens': 800
+        }
+    )
 
     oa_chain = LLMChain(
         llm=open_assistant,
