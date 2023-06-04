@@ -10,7 +10,8 @@ This is just a demo on using OpenAssistant with langchain on huggingface
 pip install -U pdm
 pdm sync
 ```
-### 2. filling in hugging face api key
+### 2. Fill in HuggingFace inference api key
+obtaining an Inference API key: https://huggingface.co/docs/api-inference/quicktour#get-your-api-token
 
 ```bash
 cp .env.dist .env
