@@ -2,17 +2,22 @@
 
 This is just a demo on using OpenAssistant with langchain on huggingface 
 
-# install dependencies
+# Setup
+
+### 1. Install Dependencies
+
 ```bash
 pip install -U pdm
 pdm sync
 ```
+### 2. filling in hugging face api key
 
-fill in the env var after copying the .env file
 ```bash
 cp .env.dist .env
+vim .env
 ```
-get your huggingface api key and write it in the .env file
+### 3. Ask a question
+
 ```bash
 pdm run main.py "Hi, Ask me a question instead"
 ```
